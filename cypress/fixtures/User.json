@@ -1,0 +1,10 @@
+{
+    "validUser": {
+      "email": "enstudent@bma.org.uk",
+      "password": "lookafterdoctors"
+    },
+    "invalidUser": {
+      "email": "invalid@test.com",
+      "password": "invalidpassword"
+    }
+}

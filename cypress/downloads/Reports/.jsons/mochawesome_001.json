@@ -1,0 +1,131 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-01-08T07:26:57.137Z",
+    "end": "2024-01-08T07:27:33.693Z",
+    "duration": 36556,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b17c15d8-6c9d-4a76-bf74-7f08a87eb0fc",
+      "title": "",
+      "fullFile": "cypress\\e2e\\TestCase\\LoginTest.cy.js",
+      "file": "cypress\\e2e\\TestCase\\LoginTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "42a707c9-6e74-4d20-b535-7735c33b2198",
+          "title": "Login Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login Pass",
+              "fullTitle": "Login Suite Login Pass",
+              "timedOut": null,
+              "duration": 24130,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n    \"value\": \"cypress\\\\e2e\\\\TestCase\\\\LoginTest.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\LoginTest.cy.js\\\\Homepage.png\"\n      ]\n    ]\n  }\n]",
+              "code": "var loginPage = new _LoginPage[\"default\"]();\ncy.visit(Cypress.env('url'));\nCypress.config('defaultCommandTime', 6000);\nloginPage.getSignIn().click();\nloginPage.getEmail().type(this.data.validUser.email);\nloginPage.getPassword().type(this.data.validUser.password);\nloginPage.getlogin().click();\nCypress.config('defaultCommandTime', 6000);\ncy.get('b').should('contains.text', 'Your employers');\ncy.screenshot('Homepage');",
+              "err": {},
+              "uuid": "ab4d4e9d-315f-4988-9c35-b99421a86a9e",
+              "parentUUID": "42a707c9-6e74-4d20-b535-7735c33b2198",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login Fail",
+              "fullTitle": "Login Suite Login Fail",
+              "timedOut": null,
+              "duration": 9020,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\TestCase\\\\LoginTest.cy.js\"\n}",
+              "code": "var loginPage = new _LoginPage[\"default\"]();\ncy.visit(Cypress.env('url'));\nloginPage.getSignIn().click();\nloginPage.getEmail().type(this.data.invalidUser.email);\nloginPage.getPassword().type(this.data.invalidUser.password);\nloginPage.getlogin().click();\ncy.get('.text-error-heading').should('contains.text', 'Details not recognised');",
+              "err": {},
+              "uuid": "228479c3-cd06-4ced-8ce6-cb8eefabc28b",
+              "parentUUID": "42a707c9-6e74-4d20-b535-7735c33b2198",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ab4d4e9d-315f-4988-9c35-b99421a86a9e",
+            "228479c3-cd06-4ced-8ce6-cb8eefabc28b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 33150,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\downloads\\Reports\\.jsons",
+        "charts": true,
+        "reportPageTitle": "My Test Report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveHtml": true,
+        "videoUploadOnPasses": true,
+        "saveJson": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
