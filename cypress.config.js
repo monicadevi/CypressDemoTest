@@ -53,16 +53,18 @@ module.exports = defineConfig({
     // Reporter configuration
     reporter: "cypress-multi-reporters",
     reporterOptions: {
-      reporterEnabled : "mochawesome, mocha-junit-reporter",
+      reporterEnabled: "cypress-mochawesome-reporter, mocha-junit-reporter",
+      cypressMochawesomeReporterReporterOptions: {
       reportDir: "cypress/downloads/Reports",
       charts: true,
-      reportPageTitle: "My Test Report",
+      reportPageTitle: "My Test Suite",
       embeddedScreenshots: true,
-      inlineAssets: true,
-      saveHtml: true,
-      videoUploadOnPasses: true,
-      saveJson: true,
-      timestamp : "mmddyyyy_HHMM_ss"
+      inlineAssets: true
+      },
+      mochaJunitReporterReporterOptions: {
+        mochaFile: "cypress/reports/junit/results-[hash].xml"
+      }
     },
+     "video": true
   },
 });
