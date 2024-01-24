@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2024-01-24T06:52:48.277Z",
-    "end": "2024-01-24T06:53:21.155Z",
-    "duration": 32878,
+    "start": "2024-01-24T13:22:38.641Z",
+    "end": "2024-01-24T13:23:13.295Z",
+    "duration": 34654,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "bf4108b5-6ab2-4d0b-b247-02404a04e8bd",
+      "uuid": "891d766e-fe4a-4cd2-9e84-845dff58e3af",
       "title": "",
       "fullFile": "cypress\\e2e\\TestCase\\AddAnEmployerTest.js",
       "file": "cypress\\e2e\\TestCase\\AddAnEmployerTest.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "eacd1bef-4dd2-411c-9dbd-9135692cd9f7",
+          "uuid": "31786b0d-58b5-47dc-a8a6-826c8562c78d",
           "title": "Add employer Suite",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Add An Employer",
               "fullTitle": "Add employer Suite Add An Employer",
               "timedOut": null,
-              "duration": 28050,
+              "duration": 30105,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n    \"value\": \"cypress\\\\e2e\\\\TestCase\\\\AddAnEmployerTest.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\AddAnEmployerTest.js\\\\Homepage.png\"\n      ]\n    ]\n  }\n]",
               "code": "var loginPage = new _LoginPage[\"default\"]();\nvar addEmployer = new _AddAnEmployerPage[\"default\"]();\ncy.visit(Cypress.env('url'));\nloginPage.getSignIn().click();\nCypress.config('defaultCommandTime', 3000);\nloginPage.getEmail().type(this.data.validUser.email);\nloginPage.getPassword().type(this.data.validUser.password);\nloginPage.getlogin().click();\nCypress.config('defaultCommandTime', 6000);\ncy.get('b').should('contains.text', 'Your employers');\naddEmployer.clickAddEmployer();\naddEmployer.searchEmployer().type(this.info.search);\ncy.get('.k-item').click(); // Assuming this is specific and doesn't need to be part of the page object\naddEmployer.setDccCategory().type(this.info.Dcc);\naddEmployer.setSPAcategory().type(this.info.SPA);\naddEmployer.clickFinalSubmit().click();\ncy.screenshot('Homepage');",
               "err": {},
-              "uuid": "0fc6e28d-6028-4330-873c-f137e3aee490",
-              "parentUUID": "eacd1bef-4dd2-411c-9dbd-9135692cd9f7",
+              "uuid": "7ce864a8-3c9e-403e-9cc2-05e03012602a",
+              "parentUUID": "31786b0d-58b5-47dc-a8a6-826c8562c78d",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "0fc6e28d-6028-4330-873c-f137e3aee490"
+            "7ce864a8-3c9e-403e-9cc2-05e03012602a"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 28050,
+          "duration": 30105,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

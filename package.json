@@ -13,7 +13,7 @@
     "multiple-cucumber-html-reporter": "^3.6.0"
   },
   "scripts": {
-    "test": "cypress open",
+    "test": "cypress run",
     "headTest": "npm run test --headed",
     "chromeTest": "npm run test --browser chrome",
     "cy_dashboard": "npx cypress run --record --key 22440560-4a45-4054-b7c0-f9f5b58b2896"
