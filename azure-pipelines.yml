@@ -43,11 +43,11 @@ steps:
 
 - task: PublishTestResults@2
   inputs:
-      testResultsFormat: 'JUnit' # Cypress generates JUnit XML reports
-      testResultsFiles: 'cypress/reports/junit/results-[hash].xml'
-      searchFolder: '$(System.DefaultWorkingDirectory)'
-      failTaskOnFailedTests: true
-      mergeTestResults: true
-      testRunTitle: 'Cypress Test Run'
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/cypress/reports/junit/results-*.xml'  # Adjust the pattern to match your file naming
+    searchFolder: '$(System.DefaultWorkingDirectory)'
+    failTaskOnFailedTests: true
+    mergeTestResults: true
+    testRunTitle: 'Cypress Test Run'
   condition: succeededOrFailed()
 
