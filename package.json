@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "cypress-multi-reporters": "^1.6.4",
-    "junit-report-merger": "^6.0.3",
+    "junit-report-merger": "^6.0.4",
     "mocha": "^10.2.0"
   }
 }
