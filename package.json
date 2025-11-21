@@ -28,6 +28,6 @@
   "dependencies": {
     "cypress-multi-reporters": "^1.6.4",
     "junit-report-merger": "^6.0.3",
-    "mocha": "^10.2.0"
+    "mocha": "^10.6.0"
   }
 }
